@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CorrespondenceTemplateEnvelope>
+
+  <CorrespondenceTemplate templatetype="childactivity">
+
+    <CorrespondenceTemplateContent deliverymedium="email" type="html" tag="[ENVIRONMENT][CHILD_FIRSTNAME]’s VIP Parent Connect Child Activity Report">
+      <html>
+        <head>
+          <link type="text/css" rel="Stylesheet" href="[WEBSITE]/Styles/Site.css" />
+        </head>
+        <body>
+          <font style="font-size:14px; face: Bookman Old Style">
+            Dear [PARENT_FIRSTNAME],
+            <br />
+            <br />
+            Please find [CHILD_FIRSTNAME]’s activity report below for today, [TODAY].
+            <br/>
+            <br/>
+            <table cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td align="center" colspan="*">
+                  <H3>
+                    <i>[CENTER]</i>
+                  </H3>
+                </td>
+              </tr>
+            </table>
+            <br/>
+            <br/>
+            <table cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td align="center" colspan="*">
+                  <H3>
+                    <i>Child Activity Report</i>
+                  </H3>
+                </td>
+              </tr>
+            </table>
+            <br/>
+            <br/>
+            <p align="left">
+              <H3>
+                <i>GROUP - [GROUP_NAME]</i>
+              </H3>
+            </p>
+            <p align="left">
+              [REPORT]
+            </p>
+            <br />
+            <br />
+            <span style="color:gray">
+              <br />
+              Issued from VIP Parent Connect
+              <br />
+            </span>
+          </font>
+        </body>
+      </html>
+    </CorrespondenceTemplateContent>
+  </CorrespondenceTemplate>
+
+</CorrespondenceTemplateEnvelope>

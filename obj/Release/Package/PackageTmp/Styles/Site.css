@@ -1,0 +1,216 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}
+
+.HoverSelectAll {
+}
+
+.ButtonSelectAll {
+     vertical-align: middle;
+}
+
+.policyDropDown {
+  font-family: Monospace;
+  font-size: 12px;
+}
+
+.Grid td,
+td.Grid,
+.AlternatingGrid,
+.AlternatingGrid td {
+  padding: 10px;
+  white-space: nowrap;
+  border: solid 1px #f7f7fb;
+}
+
+.table {
+    border-spacing: 8px 2px; 
+    padding: 10px; 
+    table-layout: auto; 
+    display: table;
+    border: none;
+}
+
+.AlternatingGrid,
+.AlternatingGrid td {
+  background-color: #ededed;
+}
+
+td.HeaderGrid,
+.HeaderGrid th,
+.HeaderGrid {
+  padding: 10px;
+  white-space: nowrap;
+  font-weight: bold;
+  border: solid 1px #f7f7fb;
+}
+
+.SortableHeaderGrid {
+     cursor: pointer;
+}
+
+.NotInClass {
+    color: lightgray;
+}
+
+.overlay {
+  z-index: 99999;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay img {
+  z-index: 99999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.feedback {
+  margin: auto;
+  color: Red;
+  font-weight: bold;
+  font-size: small;
+}
+
+.feedbacksuccess {
+  margin: auto;
+  color: green;
+  font-weight: bold;
+  font-size: small;
+}
+
+
+/** 
+    Popup CSS 
+
+    Added to normalize how we show messages and errors in web pages from fornt-end/back-end
+    http://inspirationalpixels.com/tutorials/custom-popup-modal
+    PR 04/14/16 
+    
+**/
+
+/* Outer */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-info {
+    z-index: 99999;
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+}
+ 
+/* Inner */
+.popup-inner-info {
+    max-width: 40%;
+    width: 40%;
+    height: 10%; 
+    padding: 20px 2px 0px 2px;
+    position:absolute;
+    top:10%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    font-family:Arial, Sans-Serif;
+    font-size:14px;
+    text-align:center;
+    vertical-align:  middle;
+    border-radius: 25px;
+    background-color: #519f2f;
+    color: #fff;
+}
+
+.popup-inner {
+    max-width: 75%;
+    width: 75%;
+    height: 75%;
+    padding: 20px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    border-radius:3px;
+    background:#fff;
+}
+ 
+/* Close Button */
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    -webkit-transform:translate(50%, -50%);
+    transform:translate(50%, -50%);
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+}
+ 
+.popup-close:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}

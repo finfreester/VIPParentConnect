@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaNNyetYA00qVhfRLEkfX4wAAAAACAAAAAAAQZgAAAAEAACAAAAAT29sReICVaKOYAhAVy/rJlyujFIxWViiltwQO3M9irAAAAAAOgAAAAAIAACAAAABLPmYEoPU+afLYE6w/nf8lfrnqBa1iEAzcL/iJaqAFxCAAAAAKYWfrgnGt7kBvvMqTEfl7xDXSrl9OaXuBGufFmrU0q0AAAABk5IzVr0mKXaHQxoAFeTUgNPakdulRV2Ylop/szBpYiMjfe0UjcUBl/bZa2D2cynytlwmKODuuM7aoYyEkATVE</EncryptedPassword>
+    <_PublishTargetUrl>ftp://ftppub.everleap.com/site/wwwroot/VIPDayCare</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Account/Login.aspx">
+      <publishTime>06/17/2016 21:56:18</publishTime>
+    </File>
+    <File Include="Account/Register.aspx">
+      <publishTime>06/17/2016 21:56:18</publishTime>
+    </File>
+    <File Include="Account/ResetPassword.aspx">
+      <publishTime>06/17/2016 21:56:19</publishTime>
+    </File>
+    <File Include="Account/ResetPasswordConfirmation.aspx">
+      <publishTime>05/01/2016 16:11:50</publishTime>
+    </File>
+    <File Include="Account/Web.config">
+      <publishTime>05/23/2016 23:28:07</publishTime>
+    </File>
+    <File Include="App_Data/CorrespondenceTemplate.xml">
+      <publishTime>05/17/2016 21:02:12</publishTime>
+    </File>
+    <File Include="bin/CBSUtilityLibrary.dll">
+      <publishTime>01/15/2017 14:39:15</publishTime>
+    </File>
+    <File Include="bin/Correspondence.dll">
+      <publishTime>03/11/2017 12:10:27</publishTime>
+    </File>
+    <File Include="bin/Email.dll">
+      <publishTime>03/11/2017 12:10:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>05/01/2016 20:48:52</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>05/01/2016 20:48:52</publishTime>
+    </File>
+    <File Include="bin/SP.Utilities.Correspondence.dll">
+      <publishTime>02/05/2016 13:41:18</publishTime>
+    </File>
+    <File Include="bin/SP.Utilities.dll">
+      <publishTime>04/15/2016 15:01:26</publishTime>
+    </File>
+    <File Include="bin/SP.Utilities.Email.dll">
+      <publishTime>05/01/2016 18:43:15</publishTime>
+    </File>
+    <File Include="bin/SP.Utilities.Report.dll">
+      <publishTime>04/15/2016 15:01:38</publishTime>
+    </File>
+    <File Include="bin/SP.Utilities.Report.XmlSerializers.dll">
+      <publishTime>04/15/2016 15:01:38</publishTime>
+    </File>
+    <File Include="bin/VIPDataRepo.dll">
+      <publishTime>04/13/2017 23:04:25</publishTime>
+    </File>
+    <File Include="bin/VIPParentConnect.dll">
+      <publishTime>04/13/2017 23:04:26</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>06/23/2016 17:07:36</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/29/2016 21:50:38</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/01/2016 16:18:18</publishTime>
+    </File>
+    <File Include="images/ajax-loader-large.gif">
+      <publishTime>04/30/2016 23:58:51</publishTime>
+    </File>
+    <File Include="images/selectall.png">
+      <publishTime>05/18/2016 11:48:36</publishTime>
+    </File>
+    <File Include="images/VIPLogo.png">
+      <publishTime>04/29/2016 21:49:23</publishTime>
+    </File>
+    <File Include="Manage/Centers.aspx">
+      <publishTime>06/17/2016 21:56:19</publishTime>
+    </File>
+    <File Include="Manage/Children.aspx">
+      <publishTime>06/24/2016 00:16:52</publishTime>
+    </File>
+    <File Include="Manage/ChildrenGroups.aspx">
+      <publishTime>06/17/2016 22:11:53</publishTime>
+    </File>
+    <File Include="Manage/Groups.aspx">
+      <publishTime>06/17/2016 21:56:19</publishTime>
+    </File>
+    <File Include="Manage/TrackGroupActivities.aspx">
+      <publishTime>06/17/2016 21:56:20</publishTime>
+    </File>
+    <File Include="Manage/Web.config">
+      <publishTime>06/30/2016 14:21:26</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/16/2016 21:31:47</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>04/29/2016 21:45:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>04/29/2016 21:45:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.intellisense.js">
+      <publishTime>04/29/2016 21:45:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>04/29/2016 21:45:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>04/29/2016 21:45:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.10.2.min.js">
+      <publishTime>05/04/2016 01:28:54</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>04/29/2016 21:45:48</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>05/27/2016 12:13:24</publishTime>
+    </File>
+    <File Include="Styles/bootstrap.cosmo.css">
+      <publishTime>06/17/2016 21:56:30</publishTime>
+    </File>
+    <File Include="Styles/bootstrap.cosmo.min.css">
+      <publishTime>06/17/2016 21:56:30</publishTime>
+    </File>
+    <File Include="Styles/bootstrap.min.css">
+      <publishTime>06/17/2016 21:56:30</publishTime>
+    </File>
+    <File Include="Styles/jquery-ui-1.10.2.css">
+      <publishTime>05/04/2016 01:30:48</publishTime>
+    </File>
+    <File Include="Styles/Site.css">
+      <publishTime>06/16/2016 12:57:14</publishTime>
+    </File>
+    <File Include="Web%28prod%29.config">
+      <publishTime>05/18/2016 17:17:42</publishTime>
+    </File>
+    <File Include="Web%28prod%29.Debug.config">
+      <publishTime>05/18/2016 15:23:07</publishTime>
+    </File>
+    <File Include="Web%28prod%29.Release.config">
+      <publishTime>05/18/2016 15:23:07</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/10/2017 22:08:40</publishTime>
+    </File>
+    <File Include="WebProd.config">
+      <publishTime>02/11/2017 15:43:24</publishTime>
+    </File>
+    <File Include="WebProd.Debug.config">
+      <publishTime>05/18/2016 18:06:14</publishTime>
+    </File>
+    <File Include="WebProd.Release.config">
+      <publishTime>05/18/2016 18:06:14</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

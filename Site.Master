@@ -1,0 +1,176 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="VIPDayCareCenters.SiteMaster" EnableViewState="true" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title><%: Page.Title %></title>
+
+    <link type="text/css" rel="Stylesheet" href="~/Styles/bootstrap.min.css" />
+    <link type="text/css" rel="Stylesheet" href="~/Styles/Site.css" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <script type="text/javascript">
+
+        function showInfoPopup(message) {
+
+            $('#popupInfo .msg').text(message);
+            $("#popupInfo").fadeIn(350).delay(1000).fadeOut("fast");
+
+        }
+
+        function showErrorPopup(title, message) {
+
+            $('#popuperror .title').text(title);
+            $('#popuperror .msg').text(message);
+            $('#popuperror').fadeIn(350);
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <form id="frmVIP" runat="server">
+        <asp:ScriptManager ID="sm" runat="server">
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a id="A1" runat="server" class="navbar-brand selector" href="~/">
+                        <asp:Image runat="server" ID="logo" ImageAlign="Middle" ImageUrl="~/images/VIPLogo.png" AlternateText="logo"  />
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a id="A2" runat="server" class="selector" href="~/Account/Login.aspx">Log in</a></li>
+                    </ul>
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <AnonymousTemplate>
+                            You are not logged in.
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><asp:LoginName ID="LoginName" runat="server" FormatString="Hello, {0}" /></a></li>
+                                <li>
+                                    <asp:LoginStatus ID="LoginStatus" runat="server" LogoutText="Log off" OnLoggingOut="LoginStatus_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> VIP Daycare Centers</p>
+            </footer>
+        </div>
+    </form>
+    <div id="please_wait" class="overlay">
+        <img src="~/images/ajax-loader-large.gif" style="margin: 20px 80px;" runat="server" id="waitingGif" alt="please wait..." />
+    </div>
+
+    <div id="popuperror" class="popup" data-popup="popup">
+        <div class="popup-inner">
+            <h2 class="title"></h2>
+            <p class="msg feedback" style="overflow-x: hidden; overflow-y: auto; word-wrap: break-word;"></p>
+            <p><a data-popup-close="popup" href="#">Close</a></p>
+            <a class="popup-close" data-popup-close="popup" href="#">x</a>
+        </div>
+    </div>
+
+    <div id="popupInfo" class="popup-info">
+        <div class="popup-inner-info">
+            <p class="msg" style="overflow-x: hidden; overflow-y: auto; word-wrap: break-word;"></p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var prm = null;
+
+        try {
+            prm = Sys.WebForms.PageRequestManager.getInstance();
+        }
+        catch (e) {
+            // statements to handle any exceptions
+            //NOP
+        }
+      
+         if (prm != null) {
+             prm.add_beginRequest(MasterBeginRequestHandler);
+             prm.add_endRequest(MasterEndRequestHandler);
+         }
+
+         function rehookEvents() {
+
+             $('.selector').change(function () {
+                 $('#please_wait').show();
+             });
+
+             $('.btn, input.selector').click(function () {
+                 $('#please_wait').show();
+             });
+
+             $('.submit').click(function () {
+                 if (typeof (Page_ClientValidate) == 'function') {
+                     Page_ClientValidate();
+                 }
+
+                 if (Page_IsValid) {
+                     $('#please_wait').show();
+                 }
+                 else {
+                     $('#please_wait').hide();
+                 }
+             });
+
+             //----- CLOSE POPUP
+             $('[data-popup-close]').on('click', function (e) {
+                 var targeted_popup_class = $(this).attr('data-popup-close');
+                 $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+
+                 e.preventDefault();
+             });
+
+         }
+
+         function MasterBeginRequestHandler(sender, args) {
+         }
+
+         function MasterEndRequestHandler(sender, args) {
+
+             var err = args.get_error();
+
+             $('#please_wait').hide();
+
+             rehookEvents();
+
+             if ((err != undefined) && (err.httpStatusCode != 0)) {
+                 args.set_errorHandled(true);
+                 showErrorPopup('VIP Parent Connect Client-Side Exception Occurred', 'Process Failed with Exception ' + err.name + ' [' + err.httpStatusCode + '] - ' + err.message);
+             }
+
+         }
+
+         $(document).ready(function () {
+
+             rehookEvents();
+
+         });
+
+    </script>
+</body>
+</html>
